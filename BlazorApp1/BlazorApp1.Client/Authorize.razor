@@ -1,0 +1,134 @@
+﻿@using System.Net.Http.Headers
+@using Newtonsoft.Json
+@using practice4.Client.Service
+@rendermode InteractiveWebAssembly
+@inject HttpClient httpClient
+@inject IAccount account
+@inject NavigationManager navigation
+@page "/auth"
+
+<Layout Padding="Padding.Is5.OnDesktop" >
+    <LayoutHeader TextSize="TextSize.Heading1"  TextAlignment="TextAlignment.Center">
+        @currentAction
+    </LayoutHeader>
+    <LayoutContent Margin="Margin.IsAuto.OnX.Is5.OnY" Width="Width.Is50" Display="Display.Flex" Flex="Flex.Column.JustifyContent.Start">
+
+        @if (currentAction == ACTION_NOTHING)
+        {
+            <Button Display="Display.Block"
+                    Margin="Margin.IsAuto.OnX.Is1.OnY"
+                    Width="Width.Is100"
+                    Color="Color.Default"
+                    Clicked="() => setAction(ACTION_REGISTER)">
+                @ACTION_REGISTER
+            </Button>
+            <Button Display="Display.Block"
+                    Margin="Margin.IsAuto.OnX.Is1.OnY"
+                    Width="Width.Is100"
+                    Color="Color.Primary"
+                    Clicked="() => setAction(ACTION_LOGIN)">
+                @ACTION_LOGIN
+            </Button>
+        }
+        @if (currentAction == ACTION_REGISTER)
+        {
+            <Form Flex="Flex.Column">
+                <Field >
+                    <FieldLabel>Логин</FieldLabel>
+                    <TextEdit @bind-Text="@registrationModel.Login" ></TextEdit>
+                </Field>
+                <Field>
+                    <FieldLabel>Пароль</FieldLabel>
+                    <TextEdit Role="TextRole.Password" @bind-Text="registrationModel.Password"></TextEdit>
+                </Field>
+                <Field>
+                    <FieldLabel>ФИО</FieldLabel>
+                    <TextEdit @bind-Text="registrationModel.FIO" Role="TextRole.Text" MaskType="MaskType.RegEx" EditMask="^[а-яА-Я ]*$" name="fio"></TextEdit>
+                </Field>
+                <Button Color="Color.Primary" Clicked="@processRegister" Type="ButtonType.Button">Сохранить</Button>
+            </Form>
+        }
+        @if (currentAction == ACTION_LOGIN)
+        {
+            <Alert @ref=@failedLoginAlert Color="Color.Danger">
+                <AlertDescription>Неправильный логин или пароль.</AlertDescription>
+                <CloseButton></CloseButton>
+            </Alert>    
+            <Form Flex="Flex.Column">
+                <Field>
+                    <FieldLabel>Логин</FieldLabel>
+                    <TextEdit @bind-Text="loginModel.Login"></TextEdit>
+                </Field>
+                <Field>
+                    <FieldLabel>Пароль</FieldLabel>
+                    <TextEdit Role="TextRole.Password" @bind-Text="loginModel.Password"></TextEdit>
+                </Field>
+                <Button Color="Color.Primary" Clicked="@processLogin" Type="ButtonType.Button">Сохранить</Button>
+            </Form>
+
+        }
+        
+    </LayoutContent>
+</Layout>
+@code {
+    const string ACTION_REGISTER = "Регистрация";
+    const string ACTION_LOGIN = "Вход";
+    const string ACTION_NOTHING = "Авторизация";
+    const string REGISTER_URL = "https://localhost/register";
+    const string LOGIN_URL = "https://localhost/login";
+
+    string currentAction = ACTION_NOTHING;
+    Alert failedLoginAlert;
+
+    User registrationModel { get; set; } = new();
+    User loginModel { get; set; } = new ();
+
+    void setAction(string action)
+    {
+        currentAction = action;
+
+        StateHasChanged();
+    }
+
+    async Task<HttpResponseMessage> submitForm<T>(T model, string url)
+    {
+        MultipartFormDataContent content = new MultipartFormDataContent();
+        foreach (var key in model.GetType().GetProperties())
+        {
+            content.Add(new StringContent((key.GetValue(model) as string) ?? "empty"), key.Name);
+        }
+        HttpResponseMessage response = await httpClient.PostAsync(url, content);
+
+        return response;
+    }
+
+    async Task processLogin()
+    {
+        var response = await submitForm(loginModel, LOGIN_URL);
+        if (!response.IsSuccessStatusCode )
+        {
+            await failedLoginAlert.Show();
+            StateHasChanged();
+            return;
+        }
+        User? user = await response.Content.ReadFromJsonAsync<User>();
+        if (user == null)
+        {
+            Console.WriteLine("failed json login"); return;
+        }
+        account.user = user;
+        Console.WriteLine(JsonConvert.SerializeObject(user));
+        navigation.NavigateTo("/dashboard");
+    }
+
+    async Task processRegister()
+    {
+        var response = await submitForm(registrationModel, REGISTER_URL);
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("/register 200 ok");
+            navigation.NavigateTo("/auth", true);
+        }
+        else Console.WriteLine($"/register error");
+    }
+}

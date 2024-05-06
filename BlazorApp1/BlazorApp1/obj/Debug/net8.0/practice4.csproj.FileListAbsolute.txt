@@ -1,0 +1,135 @@
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.csproj.AssemblyReference.cache
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.GeneratedMSBuildEditorConfig.editorconfig
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.AssemblyInfoInputs.cache
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.AssemblyInfo.cs
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.csproj.CoreCompileInputs.cache
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.MvcApplicationPartsAssemblyInfo.cache
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.Client.staticwebassets.runtime.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\appsettings.Development.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\appsettings.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugProxy.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.FileFormats.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.NET.WebAssembly.Webcil.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.SymbolStore.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Newtonsoft.Json.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.staticwebassets.runtime.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.exe
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.deps.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.runtimeconfig.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.pdb
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.JSInterop.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Npgsql.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.Client.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.Client.pdb
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets.build.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets.development.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.practice4.Microsoft.AspNetCore.StaticWebAssets.props
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.build.practice4.props
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.practice4.props
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.practice4.props
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets.pack.json
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\scopedcss\bundle\practice4.styles.css
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\scopedcss\projectbundle\practice4.bundle.scp.css
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.csproj.Up2Date
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\refint\practice4.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.pdb
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.genruntimeconfig.cache
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\ref\practice4.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Blazorise.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Blazorise.Bootstrap.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Blazorise.Icons.FontAwesome.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Blazorise.Licensing.dll
+D:\2 kurs\korp\practice4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\appsettings.Development.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\appsettings.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugProxy.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.FileFormats.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.NET.WebAssembly.Webcil.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.SymbolStore.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\BlazorDebugProxy\Newtonsoft.Json.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.Client.staticwebassets.runtime.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.staticwebassets.runtime.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.exe
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.deps.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.runtimeconfig.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.pdb
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Blazorise.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Blazorise.Bootstrap.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Blazorise.Icons.FontAwesome.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Blazorise.Licensing.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.JSInterop.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Npgsql.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.Client.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\bin\Debug\net8.0\practice4.Client.pdb
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.csproj.AssemblyReference.cache
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.AssemblyInfoInputs.cache
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.AssemblyInfo.cs
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.csproj.CoreCompileInputs.cache
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.MvcApplicationPartsAssemblyInfo.cache
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.sourcelink.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets.build.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets.development.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.practice4.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.build.practice4.props
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.practice4.props
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.practice4.props
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\scopedcss\bundle\practice4.styles.css
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\scopedcss\projectbundle\practice4.bundle.scp.css
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.csproj.Up2Date
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\refint\practice4.dll
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.pdb
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\practice4.genruntimeconfig.cache
+D:\Desktop\pc4\BlazorApp1\BlazorApp1\obj\Debug\net8.0\ref\practice4.dll

@@ -1,0 +1,228 @@
+﻿@rendermode InteractiveWebAssembly
+@inject HttpClient httpClient
+@inject IAccount account
+@inject NavigationManager navigation
+@page "/"
+@page "/dashboard"
+@using System.Collections.ObjectModel
+@using Newtonsoft.Json
+@using practice4.Client.Service
+
+<Layout Padding="Padding.Is5.OnDesktop" Margin="Margin.IsAuto.OnX" Width="Width.Is50">
+    <LayoutHeader TextSize="TextSize.Heading1" TextAlignment="TextAlignment.Center">
+        Почта
+    </LayoutHeader>
+    <LayoutContent Display="Display.Flex" Flex="Flex.Column.JustifyContent.Start" Style="height:fit-content" >
+        
+        <Card>
+            <CardBody>
+                <CardText>
+                    @account.user?.FIO
+                </CardText>
+            </CardBody>
+        </Card>
+        <Modal @ref="@filterMessagesPrompt">
+            <ModalContent Centered>
+                <ModalHeader>
+                    <ModalTitle>Фильтровать</ModalTitle>
+                    <CloseButton></CloseButton>
+                </ModalHeader>
+                <ModalBody>
+                    <Label>Интервал времени</Label>
+                    <DatePicker TValue="DateTime"
+                                @bind-Dates="currentMessageFilter.DateRange"
+                                InputMode="DateInputMode.Date"
+                                SelectionMode="DateInputSelectionMode.Range">
+                    </DatePicker>
+                    <Paragraph></Paragraph>
+                    <Label>От отправителя</Label>
+                    <TextEdit Placeholder="Все" @bind-Text="@currentMessageFilter.SenderLogin"></TextEdit>
+                    <Paragraph></Paragraph>
+                    <Check TValue="bool" @bind-Checked="@currentMessageFilter.OnlyUnRead">
+                        Только непрочитанные
+                    </Check>
+                </ModalBody>
+                <ModalFooter>
+                    <Button Color="Color.Primary" Clicked="fetchIncomingMessages">
+                        <Icon Name="IconName.Check" IconSize="IconSize.Large"></Icon>
+                    </Button>
+                </ModalFooter>
+            </ModalContent>
+        </Modal>
+        <Button Clicked="() => {filterMessagesPrompt.Show();}">Фильтровать</Button>
+        <Div Height="Height.Is50" Overflow="Overflow.Hidden.Auto">
+            <Table>
+                <TableHeader>
+                    <TableRow>
+                        <TableHeaderCell>Тема</TableHeaderCell>
+                        <TableHeaderCell>От кого</TableHeaderCell>
+                        <TableHeaderCell>Дата</TableHeaderCell>
+                    </TableRow>
+                </TableHeader>
+
+                <TableBody>
+                    <Repeater Items="@incomingMessages">
+                        <TableRow Background="@(context.isRead ? Background.Light : Background.White)">
+                            <TableRowCell>
+                                <Button Color="Color.Link" Clicked="() => {readMessage(context);}">
+                                    @context.Title
+                                </Button>
+
+                            </TableRowCell>
+                            <TableRowCell>@context.SenderFIO</TableRowCell>
+                            <TableRowCell>@(context.Timestamp + TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow))</TableRowCell>
+                        </TableRow>
+                    </Repeater>
+                </TableBody>
+            </Table>
+        </Div>
+        <Button Color="Color.Primary" Width="Width.Is100" Clicked="() => {sendMessagePrompt.Show();}">Написать сообщение</Button>
+
+        <Modal @ref="sendMessagePrompt">
+            <ModalContent Centered>
+                <ModalHeader>
+                    <ModalTitle>Написать сообщение</ModalTitle>
+                    <CloseButton></CloseButton>
+                </ModalHeader>
+                <ModalBody>
+                    <Form Flex="Flex.Column">
+                        <Field>
+                            <FieldLabel>Кому</FieldLabel>
+                            <TextEdit @bind-Text="temporaryMessage.RecieverLogin"></TextEdit>
+                        </Field>
+                        <Field>
+                            <FieldLabel>Тема</FieldLabel>
+                            <TextEdit @bind-Text="temporaryMessage.Title"></TextEdit>
+                        </Field>
+                        <Field>
+                            <FieldLabel>Текст</FieldLabel>
+                            <TextEdit Role="TextRole.Text" @bind-Text="temporaryMessage.Content"></TextEdit>
+                        </Field>
+                    </Form>
+                </ModalBody>
+                <ModalFooter>
+                    <Button Color="Color.Primary" Clicked="@sendMessage" Type="ButtonType.Button">Отправить</Button>
+                </ModalFooter>
+            </ModalContent>
+        </Modal>
+        <Alert @ref="messageSendFailed" Color="Color.Danger">
+            <AlertDescription>Ошибка. Сообщение не было отправлено.</AlertDescription>
+            <CloseButton></CloseButton>
+        </Alert>
+        <Alert @ref="messageSendSuccess" Color="Color.Success">
+            <AlertDescription>Сообщение отправлено</AlertDescription>
+            <CloseButton></CloseButton>
+        </Alert>
+    </LayoutContent>
+    <LayoutFooter>
+
+    </LayoutFooter>
+</Layout>
+<Modal @ref="viewMessagePrompt">
+    <ModalContent>
+        <ModalHeader>
+            <ModalTitle>@selectedMessage?.Title</ModalTitle>
+            <CloseButton></CloseButton>
+        </ModalHeader>
+        <ModalBody>
+            @selectedMessage?.Content
+        </ModalBody>
+    </ModalContent>
+</Modal>
+@code {
+    List<Message> incomingMessages = [ new () {Title = "Тестовое сообщение", Timestamp = DateTime.Now, SenderId=-0}];
+
+    Message temporaryMessage = new();
+    Alert messageSendFailed;
+    Alert messageSendSuccess;
+    Modal sendMessagePrompt;
+    Modal filterMessagesPrompt;
+    Modal viewMessagePrompt;
+    Message? selectedMessage = null;
+    Filter currentMessageFilter = new();
+    async Task<HttpResponseMessage> submitForm<T>(T model, string url)
+    {
+        MultipartFormDataContent content = new MultipartFormDataContent();
+        foreach (var key in model.GetType().GetProperties())
+        {
+            content.Add(new StringContent((key.GetValue(model) as string) ?? "empty"), key.Name);
+        }
+        HttpResponseMessage response = await httpClient.PostAsync(url, content);
+
+        return response;
+    }
+    async Task fetchIncomingMessages()
+    {
+        Console.WriteLine(JsonConvert.SerializeObject(account.user));
+        if (account.user == null)
+        {
+            navigation.NavigateTo("/auth");
+            return;
+        };
+        var result = await httpClient.GetAsync(
+            $"https://localhost/message?login={account.user.Login}");
+        incomingMessages = JsonConvert.DeserializeObject<List<Message>>(await result.Content.ReadAsStringAsync());
+        foreach (Message message in incomingMessages)
+        {
+            var fioResult = await httpClient.GetAsync($"https://localhost/fio_by_id?id={message.SenderId}");
+            var loginResult = await httpClient.GetAsync($"https://localhost/login_by_id?id={message.SenderId}");
+            message.SenderFIO = await fioResult.Content.ReadAsStringAsync();
+            message.SenderLogin = await loginResult.Content.ReadAsStringAsync();
+        }
+        await filterMessagesPrompt.Hide();
+        filterResults();
+        StateHasChanged();
+    }
+
+    void filterResults()
+    {
+        Console.WriteLine(JsonConvert.SerializeObject(currentMessageFilter));
+        Console.WriteLine(JsonConvert.SerializeObject(incomingMessages));
+
+        incomingMessages = incomingMessages.Where((msg) =>
+            (currentMessageFilter.OnlyUnRead ? msg.isRead == false : true)
+            && msg.Timestamp > currentMessageFilter.DateRange[0]
+            && msg.Timestamp < currentMessageFilter.DateRange[1]
+            && (currentMessageFilter.SenderLogin == "" ? true : msg.SenderLogin == currentMessageFilter.SenderLogin)
+    ).OrderByDescending(msg => msg.Timestamp).ToList();
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await fetchIncomingMessages();
+
+        }
+    }
+    protected override async Task OnInitializedAsync()
+    {
+    }
+    async Task sendMessage()
+    {
+        temporaryMessage.SenderLogin = account.user.Login;
+        var result = await submitForm(temporaryMessage, "https://localhost/message");
+        if (result.IsSuccessStatusCode)
+        {
+            await messageSendFailed.Hide();
+            await messageSendSuccess.Show();
+            navigation.NavigateTo("/dashboard");
+        }
+        else
+        {
+            await messageSendSuccess.Hide();
+            await messageSendFailed.Show();
+        }
+        await sendMessagePrompt.Hide();
+    }
+    async Task readMessage(Message message)
+    {
+        selectedMessage = message;
+        await viewMessagePrompt.Show();
+        if (!message.isRead)
+        {
+            var result = await httpClient.PostAsync($"https://localhost/read_message?id={message.Id}", null);
+            message.isRead = true;
+            StateHasChanged();
+        }
+    }
+}
